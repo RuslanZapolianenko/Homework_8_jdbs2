@@ -4,7 +4,6 @@ import org.flywaydb.core.Flyway;
 import java.sql.*;
 
 public class OSBBMember {
-
     private static final String url = "jdbc:mysql://localhost:3306/osbb";
     private static String username = "root";
     private static String password = "Ruslan2703";
@@ -30,7 +29,6 @@ public class OSBBMember {
     }
     public static void getMembersWithAutoNotAllowed() {
         try {
-
             Connection connection = DriverManager.getConnection
                     (url, username, password);
 
@@ -79,6 +77,7 @@ public class OSBBMember {
                 e.printStackTrace();
             }
         }
+
     }
     public static void createMember(String firstName, String lastName, String email, String roles) {
         try (Connection connection = getConnection()) {
@@ -135,6 +134,7 @@ public class OSBBMember {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 
 }
