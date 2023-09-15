@@ -5,7 +5,7 @@ public class Main {
 
         OSBBMember osbbMember = new OSBBMember();
         osbbMember.fwMigration();
-        OSBBMember.getMembersWithAutoNotAllowed();
+        System.out.println(osbbMember.getMembersWithAutoNotAllowed());
     }
 }
 

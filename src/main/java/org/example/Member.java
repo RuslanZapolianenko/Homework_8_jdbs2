@@ -4,8 +4,9 @@ public class Member {
     private String firstName;
     private String lastName;
     private String email;
-    private int address;
-    private double apartmentNumber;
+    private String address;
+    private int apartmentNumber;
+    private double area;
 
     public Member() {
     }
@@ -14,39 +15,54 @@ public class Member {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public Member setFirstName(String firstName) {
         this.firstName = firstName;
+        return this;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public Member setLastName(String lastName) {
         this.lastName = lastName;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public Member setEmail(String email) {
         this.email = email;
+        return this;
     }
 
-    public int getAddress() {
+    public String getAddress() {
         return address;
     }
-    public void setAddress(int address) {
+
+    public Member setAddress(String address) {
         this.address = address;
+        return this;
     }
 
-    public double getApartmentNumber() {
+    public int getApartmentNumber() {
         return apartmentNumber;
     }
 
-    public void setApartmentNumber(double apartmentNumber) {
+    public Member setApartmentNumber(int apartmentNumber) {
         this.apartmentNumber = apartmentNumber;
+        return this;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public Member setArea(double area) {
+        this.area = area;
+        return this;
     }
 
     @Override
@@ -57,6 +73,8 @@ public class Member {
                 ", email='" + email + '\'' +
                 ", address=" + address +
                 ", apartmentNumber=" + apartmentNumber +
+                ", area=" + area +
                 '}';
     }
 }
+
